@@ -1,0 +1,50 @@
+.overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	text-align: center;
+	display: none;
+	z-index: 1000 !important;
+	/* background: #ccc8; */
+}
+
+.spinner-border {
+	top: 50% !important;
+	position: absolute;
+}
+
+h2 {
+	font-size: 30px;
+	text-align: center;
+	width: 100%;
+	background: #1462dc;
+	padding: 13px;
+	line-height: 30px;
+	color: white;
+}
+
+h4 {
+	margin-top: 20px;
+}
+
+.input-group-text.positive {
+	background-color: #c5ffdb !important;
+}
+
+.input-group-text.negative {
+	background-color: #fddddd !important;
+}
+
+.row {
+	margin-top: 10px;
+}
+
+.txt_response {
+	background-color: #FFF !important;
+	height: 150px !important;
+}
+
+#max_paragraphs {
+	margin-top: 7px !important;
+}
+

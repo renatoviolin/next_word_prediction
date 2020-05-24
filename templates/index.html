@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/app.css" rel="stylesheet">
+    <link href="../static/css/bootstrap-suggest.css" rel="stylesheet">
+    <script src="../static/js/jquery-3.4.1.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/bootstrap-suggest.js"></script>
+    <script src="../static/js/app.js"></script>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300|Open+Sans:300|Oxygen|Material+Icons" rel="stylesheet">
+</head>
+
+
+<body>
+    <div class="overlay">
+        <div class="spinner-border text-primary" role="status"><span class="sr-only">Loading...</span></div>
+    </div>
+    <h2> Deep Learning in Action </h2>
+    <div class="row">
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-10">
+            <center>
+                <h3>Word Prediction with Transformers</h3>
+            </center>
+            <div class="form-row">
+                <div class="form-group col-md-8">
+                    <br>
+                    <h4>Type a word and press space to get suggestions</h4>
+                </div>
+                <div class="form-group col-md-4">
+                    <br>
+                    <label for="max_words" id="label_max_words">Top k words: 5</label>
+                    <input type="range" class="custom-range" min="1" max="10" value="5" step="1" id="max_words">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <textarea class="form-control txt_input" id="input_text" rows="1"></textarea>
+            </div>
+
+            <h4> Predictions </h4>
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                    <label for="text_paragraphs">BERT</label>
+                    <textarea class="form-control txt_response" id="text_bert" readonly></textarea>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="text_paragraphs">XLNET</label>
+                    <textarea class="form-control txt_response" id="text_xlnet" readonly></textarea>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="text_paragraphs">XLM-Roberta</label>
+                    <textarea class="form-control txt_response" id="text_xlm" readonly></textarea>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="text_paragraphs">BART</label>
+                    <textarea class="form-control txt_response" id="text_bart" readonly></textarea>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="text_paragraphs">ELECTRA</label>
+                    <textarea class="form-control txt_response" id="text_electra" readonly></textarea>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="text_paragraphs">ROBERTA</label>
+                    <textarea class="form-control txt_response" id="text_roberta" readonly></textarea>
+                </div>
+            </div>
+            <hr>
+
+            <!-- MASKED PREDICTION -->
+            <center>
+                <h3>Masked Word Prediction</h3>
+            </center>
+
+            <div class="form-row">
+                <div class="form-group col-md-8">
+                    <br>
+                    <h4>Type a sentence, include &lt;mask&gt; to predict the word and hit Predict.</h4>
+                </div>
+                <div class="form-group col-md-2">
+                    <br>
+                    <label for="max_words" id="label_max_words">Top k words: 5</label>
+                    <input type="range" class="custom-range" min="1" max="10" value="5" step="1" id="max_words_mask">
+                </div>
+                <div class="form-group col-md-2">
+                    <label></label>
+                    <button type="button" class="btn btn-primary btn-lg btn-block" id="btn-process">Predict</button>
+                </div>
+            </div>
+            <div class="form-row">
+                <textarea class="form-control txt_input" id="mask_input_text" rows="1"></textarea>
+            </div>
+
+            <h4> Predictions </h4>
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                    <label for="text_paragraphs">BERT</label>
+                    <textarea class="form-control txt_response" id="mask_text_bert" readonly rows="1"></textarea>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="text_paragraphs">XLNET</label>
+                    <textarea class="form-control txt_response" id="mask_text_xlnet" readonly></textarea>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="text_paragraphs">XLM-Roberta</label>
+                    <textarea class="form-control txt_response" id="mask_text_xlm" readonly></textarea>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="text_paragraphs">BART</label>
+                    <textarea class="form-control txt_response" id="mask_text_bart" readonly></textarea>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="text_paragraphs">ELECTRA</label>
+                    <textarea class="form-control txt_response" id="mask_text_electra" readonly></textarea>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="text_paragraphs">ROBERTA</label>
+                    <textarea class="form-control txt_response" id="mask_text_roberta" readonly></textarea>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+</body>
+
+</html>
