@@ -11,10 +11,14 @@ This app implements two variants of the same task (predict <mask> token). The fi
 The second variant is necessary to include a <mask> token where you want the model to predict the word.
 
 
+![Word prediction](word_prediction.gif)
+
 ### Running 
 
-```cd web-app```
-```python app.py```
+```
+cd web-app
+python app.py
+```
 
 Open your browser http://localhost:8000
 
