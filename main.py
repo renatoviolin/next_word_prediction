@@ -15,8 +15,8 @@ xlmroberta_tokenizer = XLMRobertaTokenizer.from_pretrained('xlm-roberta-base')
 xlmroberta_model = XLMRobertaForMaskedLM.from_pretrained('xlm-roberta-base').eval()
 
 from transformers import BartTokenizer, BartForConditionalGeneration
-bart_tokenizer = BartTokenizer.from_pretrained('bart-large')
-bart_model = BartForConditionalGeneration.from_pretrained('bart-large').eval()
+bart_tokenizer = BartTokenizer.from_pretrained('facebook/bart-large')
+bart_model = BartForConditionalGeneration.from_pretrained('facebook/bart-large').eval()
 
 from transformers import ElectraTokenizer, ElectraForMaskedLM
 electra_tokenizer = ElectraTokenizer.from_pretrained('google/electra-small-generator')
